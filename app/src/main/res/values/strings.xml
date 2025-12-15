@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">ExpansionAppRedesign</string>
+    <string name="app_name">Lost In Crowd</string>
+    <string name="back">Back</string>
+    <string name="theme">Theme</string>
+    <string name="help">Help</string>
+    <string name="my_tickets">My Tickets</string>
+    <string name="featured_events">Featured Events</string>
+    <string name="upcoming_concerts">Upcoming Concerts</string>
+    <string name="major_festivals">Major Festivals</string>
+    <string name="ticket_availability">Ticket Availability</string>
+    <string name="almost_sold_out">ALMOST SOLD OUT!</string>
+    <string name="selling_fast">Selling Fast</string>
+    <string name="left">left</string>
+    <string name="buy_ticket">Buy Ticket</string>
+    <string name="processing">Processing...</string>
+    <string name="about">About</string>
+    <string name="my_tickets_wallet">My Tickets Wallet</string>
+    <string name="no_tickets">No tickets purchased yet!</string>
+    <string name="delete_ticket">Delete Ticket</string>
+    <string name="how_to_use">How to use LostInCrowd</string>
+    <string name="h1T">1. Browse Events</string>
+    <string name="h1d">Scroll through our featured festivals and upcoming concerts on the home page.</string>
+    <string name="h2T">2. Check Availability</string>
+    <string name="h2d">Click on any event card to see the venue, price, and ticket availability.</string>
+    <string name="h3T">3. Buy Tickets</string>
+    <string name="h3d">Tap the Buy Ticket button. Wait for the secure processing to finish.</string>
+    <string name="h4T">4. Dark Mode</string>
+    <string name="h4d">Use the star icon on the home screen to toggle between light and dark themes.</string>
+    <string name="h5T">5. Finally</string>
+    <string name="h5d">Party hard and Have fun!!!! :)</string>
+    <string name="price">£%1$d</string>
+    <string name="buy_button">Buy %1$d for £%2$d</string>
+    <string name="venue_date">%1$s • %2$s</string>
+    <string name="quantity">Quantity:</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+
 </resources>
