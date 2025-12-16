@@ -3,7 +3,7 @@
 ## Overview
 **Lost In Crowd** is a complete redesign and expansion of the **Concert Ticket App** starter lab. While the original lab provided basic functionality,This project transforms it into a modern concert and festivals booking application.Its is Built entirely using modern Jetpack Compose,The app addresses the common frustration of a generic interfaces by providing a fluid, animated, and user-centric experience.
 The app addresses the need for a modern, responsive booking experience. It enhances the original concept by introducing:
-- * **Complex State Management:** Replaced simple counters with a robust MVVM architecture using `StateFlow`.
+- * **Complex State Management:** Replaced simple counters with a robust MVVM architecture using StateFlow.
 - * **Modern UI Interface:** While the original version of this app was just a simple list.This redesign fixes that by making the app look modern, fun, and easy to use.
 - * **Realistic Simulation:** The ticket purchases now include realistic delays, similar to what users experience on live networks.
 
@@ -54,7 +54,7 @@ The application is built using the MVVM (Model-View-ViewModel) architectural pat
 ### Concurrency & Background Processing
   - To keep the app responsive, we do not perform heavy tasks on the main UI thread.
      - * Coroutines: We use Kotlin Coroutines to handle simulated network tasks.
-     - * ViewModel:  When a user buys a ticket, a coroutine is launched,It simulates a 2-second network delay (using `delay(2000)`) to mimic a real API call. This prevents the UI from freezing.
+     - * ViewModel:  When a user buys a ticket, a coroutine is launched,It simulates a 2-second network delay (using delay(2000)) to mimic a real API call. This prevents the UI from freezing.
 
 ### Architecture Diagram
 ....
@@ -76,9 +76,9 @@ The user interface was redesigned to feel like a real music festival application
   - Text colors were chosen to ensure they are readable against the background.
 
 ### App Screenshots:
-| Home Screen | Help Screen |
-|-------------|-------------|
-| ![Home](screenshots/home.png) | ![Help](screenshots/help.png) |
+| Home Screen(Light Mode)       | Help Screen | Dark Mode |
+|-------------------------------|-------------|-----------|
+| ![Home](screenshots/home.png) | ![Help](screenshots/help.png) |![dark](screenshots/dark.png)| 
 
 ---
 
