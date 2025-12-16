@@ -1,4 +1,4 @@
-package com.uog.lostincrowd.ui.theme.screens
+package com.uog.expansionappredesign.ui.theme.screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -31,6 +31,21 @@ import com.uog.expansionappredesign.ui.theme.Red
 import com.uog.expansionappredesign.viewmodel.AppView
 import androidx.compose.ui.res.stringResource
 import com.uog.expansionappredesign.R
+
+/**
+ * Displays detailed information about a specific music event selected by the user.
+ *
+ * This screen serves as the main "Product Page" for the application. It provides:
+ * - **Visual Details:** A large header image and event description.
+ * - **Availability Logic:** A dynamic [LinearProgressIndicator] that changes color (Green/Red) based on the percentage of tickets sold.
+ * - **Interactive Purchasing:** A quantity selector that updates the total price in real-time.
+ * - **Asynchronous Buying:** A "Buy" button that triggers a background network simulation in the [viewModel], showing a loading spinner while processing.
+ *
+ * @param eventId The unique identifier of the event to display. Used to retrieve data from the [EventRepository].
+ * @param viewModel The shared [AppView] ViewModel used to observe loading states (`isProcessing`) and trigger the ticket purchase logic.
+ * @param onBackClick Lambda callback invoked when the user taps the back arrow in the top app bar.
+ * @param onBuySuccess Lambda callback invoked after a successful ticket purchase transaction, typically navigating the user back or to their wallet.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetailScreen(

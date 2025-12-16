@@ -30,7 +30,20 @@ private val LightColorScheme = lightColorScheme(
     onBackground = Color.Black,
     onSurface = Color.Black
 )
-
+/**
+ * The main application theme.
+ *
+ * This Composable applies the custom [MaterialTheme] to the entire app.
+ * It also handles the logic for switching between Light and Dark modes:
+ * - Automatically detects the system setting (`isSystemInDarkTheme`).
+ * - It allows manual overrides via the [darkTheme] parameter
+ *   (controlled by the ViewModel).
+ *
+ * - Updates the Android Status Bar color to match the app's background.
+ *
+ * @param darkTheme Boolean flag to force dark mode (true) or light mode (false).
+ * @param content The screen content to be rendered inside this theme.
+ */
 @Composable
 fun LostInCrowdTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

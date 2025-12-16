@@ -34,6 +34,22 @@ import com.uog.expansionappredesign.ui.theme.purple
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.yield
 
+/**
+ * The primary dashboard of the application.
+ *
+ * This screen serves as the main entry point after the splash screen. It features:
+ * 1: A top bar with theme toggle and help navigation.
+ * 2: A "Spotlight" auto-scrolling carousel for featured events.
+ * 3: Horizontal scrolling lists (`LazyRow`) for "Upcoming Concerts"
+ *   and "Major Festivals".
+ * 4: A floating action button to access the user's ticket wallet.
+ *
+ * @param onEventClick  to go back to the Detail Screen
+ * when an event card is tapped.
+ * @param onHelpClick callback to go back to to the Help Screen.
+ * @param onToggleTheme to switch between Dark and Light modes.
+ * @param onTicketsClick to go to the Tickets Screen.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -124,7 +140,13 @@ fun HomeScreen(
         }
     }
 }
-
+/**
+ * A spotlight that auto-scrolls through featured events.
+ * It uses a [HorizontalPager] combined with a [LaunchedEffect] to automatically
+ * advance the slide every 3 seconds.
+ * @param events List of [MusicEvent] objects to display in the spotlight.
+ * @param onEventClick Callback when a specific spotlight card is clicked.
+ */
 @Composable
 fun SpotlightSection(
     events: List<MusicEvent>,
@@ -161,6 +183,11 @@ fun SpotlightSection(
     }
 }
 
+/**
+ * A large, prominent card used inside the [SpotlightSection].
+ * Displays a high-quality background image with a gradient
+ * overlay for text readability.
+ */
 @Composable
 fun SpotlightCard(
     event: MusicEvent,
@@ -212,7 +239,9 @@ fun SpotlightCard(
         }
     }
 }
-
+/**
+ * A simple helper component to render standardized section headers.
+ */
 @Composable
 fun SectionTitle(title: String) {
     Text(
@@ -223,7 +252,12 @@ fun SectionTitle(title: String) {
         modifier = Modifier.padding(start = 16.dp, bottom = 8.dp)
     )
 }
-
+/**
+ * A horizontally scrolling list (`LazyRow`) for displaying
+ * a collection of events.
+ * @param events The list of events to render.
+ * @param onEventClick Callback invoked when an item in the row is tapped.
+ */
 @Composable
 fun EventRow(
     events: List<MusicEvent>,
@@ -241,7 +275,10 @@ fun EventRow(
         }
     }
 }
-
+/**
+ * A standard sized card component for displaying event details in a list.
+ * Shows the event image, name, price, and date.
+ */
 @Composable
 fun EventCard(
     event: MusicEvent,

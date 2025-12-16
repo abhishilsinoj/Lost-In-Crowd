@@ -15,6 +15,17 @@ import androidx.navigation.NavController
 import com.uog.expansionappredesign.R
 import kotlinx.coroutines.delay
 
+/**
+ * Displays the app’s splash screen.the screen shows the lostincrowd logo
+ * for about two seconds, then automatically takes the user to the Home screen.
+ * A timed effect handles the delay and removes the splash screen
+ *
+ * from the navigation history,so users can’t navigate back to it.
+ * @param navController Handles navigation to the Home screen after the delay.
+ * It uses a [LaunchedEffect] to handle the timing and ensures the splash screen
+ * is removed from the back stack (`popUpTo`) so users cannot return to it.
+ * @param navController Used to navigate to the "home" destination after the delay.
+ */
 @Composable
 fun Opening(navController: NavController) {
     LaunchedEffect(Unit) {

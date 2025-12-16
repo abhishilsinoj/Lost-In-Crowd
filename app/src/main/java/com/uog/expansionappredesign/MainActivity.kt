@@ -14,12 +14,18 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.uog.expansionappredesign.ui.theme.LostInCrowdTheme
 import com.uog.expansionappredesign.ui.theme.screens.HomeScreen
-import com.uog.lostincrowd.ui.theme.screens.DetailScreen
+import com.uog.expansionappredesign.ui.theme.screens.DetailScreen
 import com.uog.expansionappredesign.ui.theme.screens.HelpScreen
 import com.uog.expansionappredesign.ui.theme.screens.Opening
 import com.uog.expansionappredesign.viewmodel.AppView
-import com.uog.lostincrowd.ui.theme.screens.TicketsScreen
+import com.uog.expansionappredesign.ui.theme.screens.TicketsScreen
 
+/**
+ * The entry point of the Lost In Crowd application.
+ *
+ * Sets up the [NavHost] for navigation and wraps the entire application
+ * in the [LostInCrowdTheme] based on the ViewModel's state.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +40,18 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+/**
+ * Configures the main navigation line for the application.
+ *
+ * This Composable initializes the [NavHost] and defines the navigation routes:
+ * - opening: The splash screen.
+ * - home: The main dashboard.
+ * - details: The specific event details page (accepts an integer argument).
+ * - help: The user guide screen.
+ * - tickets: The user's digital wallet.
+ *
+ * @param viewModel The shared [AppView] instance passed to screens that require state access.
+ */
 @Composable
 fun LostInCrowdApp(viewModel: AppView) {
     val navController = rememberNavController()

@@ -11,11 +11,11 @@ val Pink40 = Color(0xFF7D5260)
 
 val Red = Color(0xFFD32F2F)
 val Green = Color(0xFF388E3C)
-val Lavender = Color(0xFFF2F5FF) // Light Purple/Blue tint
-val purple = Color(0xFFD500F9)   // Neon Purple
-val blue = Color(0xFF00E5FF)     // Neon Blue
+val Lavender = Color(0xFFF2F5FF) // whitish lavender
+val purple = Color(0xFFD500F9)
+val blue = Color(0xFF00E5FF)
 val dark = Color(0xFF121212)
 val csdark = Color(0xFF1E1E1E)
 val plight = Color(0xFF6200EE)
-val blight = Lavender  // CHANGED: Use Lavender instead of White
+val blight = Lavender
 val cslight = Color(0xFFFFFFFF)

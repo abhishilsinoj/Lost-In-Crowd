@@ -7,6 +7,16 @@ import kotlin.random.Random
 enum class EventType {
     CONCERT, FESTIVAL
 }
+/**
+ * Represents a specific music event (Concert or Festival).
+ *
+ * @property id Unique identifier for the event.
+ * @property name The title of the artist or festival.
+ * @property venue The venue name/location.
+ * @property price The cost per single ticket.
+ * @property imageRes The resource ID for the event pic.
+ * @property description A summary of the event details.
+ */
 data class MusicEvent(
     val id: Int,
     val name: String,
@@ -24,7 +34,13 @@ data class MusicEvent(
     val percentSold: Float
         get() = ticketsSold.toFloat() / totalCapacity.toFloat()
 }
+
 object EventRepository {
+    /**
+     * A static data source that acts as the Model in the MVVM architecture.
+     * It simulates a database or API by providing a list of all available
+     * concerts and festivals.
+     */
     val events = listOf(
 // CONCERTS
         MusicEvent(1, "Lily Allen", "Manchester Arena", "Jun 19, 2026", R.mipmap.lily, 65.00, EventType.CONCERT, "The West End Girl Tour"),

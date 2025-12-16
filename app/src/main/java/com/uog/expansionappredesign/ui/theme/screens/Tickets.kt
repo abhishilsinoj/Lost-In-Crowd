@@ -1,4 +1,4 @@
-package com.uog.lostincrowd.ui.theme.screens
+package com.uog.expansionappredesign.ui.theme.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -40,6 +40,16 @@ import com.uog.expansionappredesign.model.MusicEvent
 import com.uog.expansionappredesign.viewmodel.AppView
 import androidx.compose.ui.res.stringResource
 import com.uog.expansionappredesign.R
+
+/**
+ * The user's digital wallet screen displaying purchased tickets.
+ * This screen observes the [viewModel.myTickets] state flow to render the UI:
+ * Empty StateIf the list is empty, a centered "No Tickets" message is shown.
+ * List State If tickets exist, they are displayed in a vertical [LazyColumn].
+ * It also provides the functionality to delete tickets directly from the list.
+ * @param viewModel The shared [AppView] to observe the ticket list and handle deletion logic.
+ * @param onBackClick Lambda callback to navigate back to the previous screen.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TicketsScreen(viewModel: AppView, onBackClick: () -> Unit) {
@@ -89,7 +99,13 @@ fun TicketsScreen(viewModel: AppView, onBackClick: () -> Unit) {
     }
     }
 }
-
+/**
+ * A reusable list item component representing a single purchased ticket.
+ * Renders a [Card] containing the event image, details (name, date, price),
+ * and a delete button to remove the ticket from the wallet.
+ * @param event The [MusicEvent] data object containing display details.
+ * @param onDelete A callback triggered when the delete icon is tapped.
+ */
 @Composable
 fun TicketItem(event: MusicEvent, onDelete: () -> Unit) {
     Card(

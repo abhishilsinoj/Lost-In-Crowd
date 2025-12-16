@@ -28,6 +28,11 @@ import androidx.compose.ui.res.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+        /**
+         * Displays a user tutorial screen.
+         * This static screen lists instructions on how to use the application.
+         * @param onBackClick Lambda callback to navigate back to the previous screen.
+         */
 fun HelpScreen(onBackClick: () -> Unit) {
     Scaffold(
         topBar = {
@@ -79,6 +84,11 @@ fun HelpScreen(onBackClick: () -> Unit) {
     }
 }
 
+/**
+ * Renders a card containing a  title and a description.
+ * @param title The header text.
+ * @param desc The detailed explanation text.
+ */
 @Composable
 fun HelpItem(title: String, desc: String) {
     Card(
