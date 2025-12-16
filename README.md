@@ -1,12 +1,32 @@
-# Mobile App Project — [Your App Name]
+# Mobile App Project — LostInCrowd
 
 ## Overview
+**Lost In Crowd** is a complete redesign and expansion of the **Concert Ticket App** starter lab. While the original lab provided basic functionality,This project transforms it into a modern concert and festivals booking application.Its is Built entirely using modern Jetpack Compose,The app addresses the common frustration of a generic interfaces by providing a fluid, animated, and user-centric experience.
+The app addresses the need for a modern, responsive booking experience. It enhances the original concept by introducing:
+> * **Complex State Management:** Replaced simple counters with a robust MVVM architecture using `StateFlow`.
+> * **Modern UI Interface:** While the original version of this app was just a simple list.This redesign fixes that by making the app look modern, fun, and easy to use.
+> * **Realistic Simulation:** Added asynchronous background processing (multithreading) to simulate real-world network latency during ticket purchases.
 
-_Provide a clear, concise description of your app._  
+## AI assistance
+This project is my own original work. I utilized AI tools (e.g., chatgpt) selectively to assist with specific code syntax and development commands. All AI-generated content was critically reviewed, tested, and executed manually.
+AI assistance was specifically used for the following areas:
+> * In designing the Coroutine scope and simulated network delay logic to prevent UI freezing.
+> * In retrieving the specific Kotlin syntax/commands needed to implement some of my concept,like simulating  ticket availability using random function.
+> * In identifying commands to resolve Gradle namespace errors.
+> * In configuring NavHost to correctly pass event IDs between screens.
+
+## Features
+> * The app has a fresh look with a Spotlight section that shows featured events,It also has 2 other sections which show the upcoming concerts and major festivals.
+> * A Visual feedback which shows Availability of seats.Besides that you can choose how many tickets to buy,and the price updates automatically.
+> * A dedicated screen where users can view and delete purchased tickets.
+> * **Theme Personalization**:
+  - **Day Mode**: White Lavender & Purple theme
+  - **Night Mode**: Neon Cyan & Magenta theme
+> * Implemented background processing,When you click "Buy," the app waits 2 seconds simulating a network connection.
+> * Added a "Help" screen to guide first-time users.
+
+Provide a clear, concise description of your app._  
 Explain its purpose, key features, and what problem it solves or what value it adds.
-
-Example:
-> This mobile app is a redesigned version of the starter lab, providing a feature-rich counter with history tracking, reset capability, and persistent storage using Room. The app demonstrates clean architecture, Jetpack Compose UI design, and coroutine-based background processing.
 
 ---
 
