@@ -16,6 +16,7 @@ import com.uog.expansionappredesign.ui.theme.LostInCrowdTheme
 import com.uog.expansionappredesign.ui.theme.screens.HomeScreen
 import com.uog.lostincrowd.ui.theme.screens.DetailScreen
 import com.uog.expansionappredesign.ui.theme.screens.HelpScreen
+import com.uog.expansionappredesign.ui.theme.screens.Opening
 import com.uog.expansionappredesign.viewmodel.AppView
 import com.uog.lostincrowd.ui.theme.screens.TicketsScreen
 
@@ -37,10 +38,14 @@ class MainActivity : ComponentActivity() {
 fun LostInCrowdApp(viewModel: AppView) {
     val navController = rememberNavController()
 
+
     NavHost(
         navController = navController,
-        startDestination = "home"
-    ) {
+        startDestination = "opening"
+    ){
+        composable("opening") {
+            Opening(navController = navController)
+        }
         composable("home") {
             HomeScreen(
                 onEventClick = { eventId ->
