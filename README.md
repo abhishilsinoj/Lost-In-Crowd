@@ -27,7 +27,7 @@ AI assistance was specifically used for the following areas:
 - **Theme Personalization**:
    - [ ] **Day Mode**: White Lavender & Purple theme
    - [ ] **Night Mode**: Neon Cyan & Magenta theme
-- Implemented background processing,When you click "Buy," the app waits 2 seconds simulating a network connection.
+- Implemented background processing,When you click Buy, the app waits 2 seconds simulating a network connection.
 - Added a "Help" screen to guide first-time users.
 
 ---
@@ -113,7 +113,7 @@ The user interface was redesigned to feel like a real music festival application
 
 ## Multithreading / Background Tasks
 
-This section explains how the app uses **Multithreading** (a key requirement of the assignment).
+This section explains how the app uses Multithreading
 
 ### The Problem
 If we download data or calculate prices on the main screen, the app will freeze and look broken.
@@ -122,11 +122,9 @@ If we download data or calculate prices on the main screen, the app will freeze 
 When you click Buy Ticket:
 1.  The app starts a background task (Coroutine) using `viewModelScope.launch`.
 2.  It waits for 2 seconds (`delay(2000)`) to simulate connecting to a server.
-3.  During this time, the "Buy" button changes to a **loading spinner** so the user knows something is happening.
+3.  During this time, the Buy button changes to a **loading spinner** so the user knows something is happening.
 4.  Once finished, it updates the ticket list and changes the screen.
-
--Why this Helps
---This keeps the app smooth and prevents Application Not Responding (ANR) errors.
+5.  This hence, keeps the app smooth and prevents Application Not Responding (ANR) errors.
 
 ## References
 - **Android Developers.** (2025). *Jetpack Compose Documentation*. [Online]. Available at: https://developer.android.com/jetpack/compose
