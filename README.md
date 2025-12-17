@@ -58,10 +58,10 @@ The application is built using the MVVM (Model-View-ViewModel) architectural pat
      - ViewModel:  When a user buys a ticket, a coroutine is launched,It simulates a 2-second network delay (using delay(2000)) to mimic a real API call. This prevents the UI from freezing.
 
 ### Architecture Diagram
-....
+
 | Diagram       | 
 |-------------------------------|
-| ![architecture](architecture.png) | 
+| ![architecture](screenshots/arch.png) | 
 
 ---
 
