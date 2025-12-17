@@ -61,7 +61,7 @@ The application is built using the MVVM (Model-View-ViewModel) architectural pat
 ....
 | Diagram       | 
 |-------------------------------|
-| ![Architecture](architecture.png) | 
+| ![architecture](architecture.png) | 
 
 ---
 
