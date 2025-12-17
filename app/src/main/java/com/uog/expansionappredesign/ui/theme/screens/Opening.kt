@@ -43,7 +43,7 @@ fun Opening(navController: NavController) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.mipmap.lostincrowd),
+            painter = painterResource(id = R.mipmap.crowd),
             contentDescription = stringResource(R.string.app_name),
             contentScale = ContentScale.Fit,
             modifier = Modifier.fillMaxSize()
