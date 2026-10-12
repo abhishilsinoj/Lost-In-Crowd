@@ -140,7 +140,7 @@ When you click Buy Ticket:
 ## Author 
 
 * **Name:** Abhishil Sinoj
-* **GitHub:** https://github.com/AbishilS
+* **GitHub:** https://github.com/abhishilsinoj
 
 ---
 
